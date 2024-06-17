@@ -1,0 +1,41 @@
+{% extends "layouts/base.html "%}
+{% load static %}
+{%block content %}
+<div  class="d-flex">
+    {% include 'layouts/sidebar.html' %}
+    <div class="w-100" >
+    {% include 'layouts/header.html' %}
+        <div class="my-3 mx-3">
+            <h3>Dashboard</h3>
+            <div class="d-flex">
+                <div class="col-3 card mx-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Total topic</h5>
+                        <h6 class="card-subtitle mb-3 text-muted">Topics</h6>
+                            <div>
+                                <canvas id="total-topic"></canvas>
+                            </div>
+                        <h1 class="card-text text-end"></h1>
+                    </div>
+                </div>
+                <div class="col-3 card mx-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Total Secotrs</h5>
+                        <h6 class="card-subtitle mb-3 text-muted">Sectors</h6>
+                            <div>
+                                <canvas id="total-sector"></canvas>
+                            </div>
+                        <h1 class="card-text text-end"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+<head>
+{% block scripts %}
+<script src="{% static 'assests/js/index.jsx'%}"></script>
+{% endblock scripts %}
+    <link rel="stylesheet" href="{% static 'assests/css/styles.css' %}">
+</head>

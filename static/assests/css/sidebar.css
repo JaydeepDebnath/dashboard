@@ -1,0 +1,14 @@
+
+.bi me-2 {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .nav-item {
+      font-size: 3.5rem;
+    }
+  }

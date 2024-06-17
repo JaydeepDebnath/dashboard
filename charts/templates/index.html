@@ -1,0 +1,37 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="d-flex">
+    <div class="card">
+        <div class="card-body">
+            <canvas id="MyChart" width="400" height="400"></canvas>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <canvas id="pieChart" width="400" height="400"></canvas>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <canvas id="lineChart" width="800" height="400"></canvas>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+<head>
+{% block scripts %}
+<!-- Include React and ReactDOM -->
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+<!-- Include Babel for JSX -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your React components and scripts -->
+<script type="module" src="{% static 'assests/js/index.jsx' %}"></script>
+{% endblock scripts %}
+<!--Include CSS-->
+<link rel="stylesheet" href="{% static 'assets/css/index.css' %}">
+</head>
